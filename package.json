@@ -1,0 +1,51 @@
+{
+  "name": "mypoint-redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel serve:dev lint:watch test:watch",
+    "serve:dev": "webpack-dev-server --config webpack.config.dev.js",
+    "lint": "esw webpack.config.* scripts/ src/",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress scripts/test-setup.js test/**/*.js",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "eslint-watch": "^4.0.2",
+    "expect": "^23.6.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.18.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anturson/mypoint-redux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anturson/mypoint-redux/issues"
+  },
+  "homepage": "https://github.com/anturson/mypoint-redux#readme"
+}
